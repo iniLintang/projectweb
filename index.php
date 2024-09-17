@@ -12,10 +12,10 @@
     <nav class="navbar">
         <div class="logo" >LookWork</div>
         <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
+            <li><a href="#home">Beranda</a></li>
+            <li><a href="#about">Tentang</a></li>
             <li><a href="#services">LookWork</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#contact">Kontak</a></li>
             <li><a href="login.php">Login</a></li>
         </ul>
         <div class="hamburger">
@@ -49,15 +49,15 @@
         <div class="service-cards">
             <div class="card">
                 <h3>Web Design</h3>
-                <p>Creating beautiful, modern, and responsive designs that adapt to all devices.</p>
+                <p>membuat design yang cantik, modern, menawan dengan responsive</p>
             </div>
             <div class="card">
                 <h3>Development</h3>
-                <p>Building secure and scalable web applications tailored to your business needs.</p>
+                <p>Membangun aplikasi web yang aman dan terukur yang disesuaikan dengan kebutuhan bisnis Anda.</p>
             </div>
             <div class="card">
-                <h3>SEO Optimization</h3>
-                <p>Improving your website's visibility and ranking on search engines.</p>
+                <h3>teknisi</h3>
+                <p>Bertanggung jawab atas instalasi, perbaikan, pemeliharaan, dan pengujian di lokasi. Teknisi ini juga memberikan layanan dan dukungan pelanggan.</p>
             </div>
         </div>
         <button class="seek-job" onclick="window.location.href='jobseek.php'">look for job</button>
@@ -66,12 +66,12 @@
 
 
     <section id="contact" class="contact-section">
-        <h2>Contact Us</h2>
+        <h2>Kontak Kami</h2>
         <form>
             <input type="text" name="name" placeholder="Your Name" required>
             <input type="email" name="email" placeholder="Your Email" required>
             <textarea name="message" placeholder="Your Message" required></textarea>
-            <button type="submit">Send Message</button>
+            <button type="submit">Kirim Pesan</button>
         </form>
     </section>
 

@@ -29,29 +29,31 @@
     <div class="grid-container">
     <?php
 include 'koneksi.php';
-$sql = "SELECT * FROM lowongan";
+$sql = "SELECT * FROM jobs";
 $result = $db->query($sql);
 
 if ($result->num_rows > 0) {
-    $no = 1;
     while ($row = $result->fetch_assoc()) {
         // Mengisi variabel untuk digunakan dalam mailto
-        $nama_comp = $row['nama_comp'];
-        $kebutuhan = $row['kebutuhan'];
-        $deskripsi = $row['deskripsi'];
-        $deskripsi = $row['deskripsi'];
-
+        $judul = $row['judul'];  // Judul pekerjaan
+        $deskripsi = $row['deskripsi'];  // Deskripsi pekerjaan
+        $lokasi = $row['lokasi'];  // Lokasi pekerjaan
+        $gaji = number_format($row['gaji'], 2);  // Gaji (format desimal)
+        $persyaratan = $row['persyaratan'];  // Persyaratan pekerjaan
+        $employer_email = "employer@example.com";  // Email perusahaan, ini bisa diambil dari employer_id jika terkait di tabel lain
 
         echo "<div class='grid-item'>";
-        echo "<h5>" . $nama_comp . "</h5>";
-        echo "<p>" . $kebutuhan . "</p>";
-        echo "<p>" . $deskripsi . "</p>";
+        echo "<h5>" . $judul . "</h5>";  // Menampilkan judul pekerjaan
+        echo "<p><strong>Lokasi:</strong> " . $lokasi . "</p>";  // Menampilkan lokasi pekerjaan
+        echo "<p><strong>Gaji:</strong> $" . $gaji . "</p>";  // Menampilkan gaji pekerjaan
+        echo "<p><strong>Deskripsi:</strong> " . $deskripsi . "</p>";  // Menampilkan deskripsi pekerjaan
+        echo "<p><strong>Persyaratan:</strong> " . $persyaratan . "</p>";  // Menampilkan persyaratan pekerjaan
 
-        // Membuat mailto link dinamis
-        $mailto_link = "mailto:example@gmail.com?subject=Job%20Application%20for%20" . urlencode($nama_comp) .
-            "&body=Dear%20" . urlencode($nama_comp) . "%2C%0A%0AI%20am%20interested%20in%20applying%20for%20the%20position%20of%20" .
-            urlencode($kebutuhan) . ".%0A%0A" . "%0A%0AThank%20you.";
-        
+        // Membuat mailto link dinamis untuk apply job
+        $mailto_link = "mailto:" . $employer_email . "?subject=Job%20Application%20for%20" . urlencode($judul) .
+            "&body=Dear%20Employer%2C%0A%0AI%20am%20interested%20in%20applying%20for%20the%20position%20of%20" .
+            urlencode($judul) . " located in " . urlencode($lokasi) . ".%0A%0AThank%20you.";
+
         // Menampilkan tombol Apply yang membuka mailto
         echo "<a href='" . $mailto_link . "' class='btn-apply'>Apply for Job</a>";
         echo "</div>";

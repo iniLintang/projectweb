@@ -1,0 +1,372 @@
+/* 
+    #16423C
+    #6A9C89
+    #C4DAD2
+    #E9EFEC
+*/
+
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #E9EFEC;
+    color: #16423C;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color:#16423C;
+    color: white;
+}
+
+form {
+    text-align: center;
+}
+
+.hero-section {
+    position: relative;
+    margin-top: 70px; /* Tambahkan margin-top untuk memberi jarak dari navbar */
+}
+
+.slider {
+    display: flex;
+    overflow: hidden; /* Agar slide yang tidak aktif tersembunyi */
+    position: relative;
+}
+
+.slide {
+    min-width: 100%;
+    transition: transform 0.5s ease-in-out; /* Percepat transisi antar slide */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner-image {
+    width: 1500px;
+    margin-top: 65px;
+    height: 500px;
+    object-fit: cover; /* Agar gambar menyesuaikan ukuran container */
+    border-radius: 10px; /* Berikan sudut sedikit melengkung */
+}
+
+/* Tombol navigasi slider */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5); /* Transparansi agar tombol tidak terlalu mencolok */
+    color: white;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+
+/* Styling for the "Apply for Job" button */
+.btn-apply {
+    display: block; /* Membuat tombol menjadi elemen block agar mudah diposisikan */
+    width: 250px;
+    height: 50px; /* Lebar tetap */
+    margin: 20px auto; /* Auto margin untuk memusatkan tombol */
+    padding: 10px 20px;
+    background-color: #6A9C89; /* Warna hijau */
+    color: white;
+    text-align: center; 
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-apply:hover {
+    background-color:  #16423C; /* Darker green on hover */
+    transform: translateY(-3px); /* Slight lift effect on hover */
+}
+
+.btn-apply:active {
+    background-color: #E9EFEC; /* Even darker green on click */
+    transform: translateY(1px); /* Slight push effect on click */
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 1.5rem;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger .line {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px;
+}
+
+.hero-section {
+    height: 100vh;
+    background: url('https://source.unsplash.com/random/1920x1080') no-repeat center center/cover;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-section h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+.hero-section p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.cta-button {
+    padding: 10px 30px;
+    background-color: #6A9C89;
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color:#C4DAD2;
+}
+
+.seek-job {
+    margin-top: 30px;
+    padding: 10px 25px;
+    background-color: #6A9C89;
+    border-radius: 8px;
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    font-family: sans-serif;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.seek-job:hover {
+    background-color:#C4DAD2;
+}
+
+.about-section, .services-section, .contact-section {
+    padding: 5rem 2rem;
+    text-align: center;
+}
+
+.about-section p {
+    max-width: 600px;
+    margin: 1rem auto;
+}
+
+.service-cards {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+
+.card {
+    background-color: white;
+    border-radius: 8px;
+    padding: 2rem;
+    width: 30%;
+    box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+}
+
+.card h3 {
+    margin-bottom: 1rem;
+}
+
+.card p {
+    font-size: 1rem;
+    color: #333;
+}
+
+
+.contact-section form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.contact-section input, .contact-section textarea {
+    padding: 10px;
+    margin-bottom: 1rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #f4f4f4;
+}
+
+.contact-section button {
+    padding: 10px;
+    background-color: #6A9C89;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.contact-section button:hover {
+    background-color: #C4DAD2;
+}
+
+
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 30px;
+    padding: 30px;
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 10px;
+    background-color: #C4DAD2;
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.grid-item {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); /* Setiap item memiliki dua kolom */
+    gap: 10px;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 10px;
+    
+}
+/* Styling for h5, p1, and p2 elements */
+.grid-item h5 {
+    font-size: 25px; /* Increase the size of h5 */
+    font-weight: bold; /* Make h5 bold */
+    margin-bottom: 8px;
+    
+}
+
+.grid-item p1 {
+    font-size: 20px; /* Set medium size for p1 */
+    font-weight: bold; /* Use medium weight for p1 */
+    display: block;
+    margin-bottom: 0px; /* Add margin between elements */
+}
+
+.grid-item p2 {
+    font-size: 15px; /* Slightly smaller font size for p2 */
+    color: #666; /* Optional: A lighter shade to differentiate p2 */
+    display: block;
+    margin-bottom: 10px; /* Add margin between elements */
+}
+
+
+
+footer {
+    margin-top: 15px;
+    padding: 2rem;
+    background-color: #333;
+    color: white;
+    text-align: center;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .service-cards {
+        flex-direction: column;
+    }
+
+    .service-cards .card {
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-links {
+        position: absolute;
+        right: 0;
+        height: 100vh;
+        top: 0;
+        background-color: #333;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .nav-links.active {
+        transform: translateX(0%);
+    }
+
+    .nav-links li {
+        margin: 1.5rem 0;
+    }
+
+    .about-section, .services-section, .contact-section {
+        grid-template-columns: 1fr; /* Satu kolom di layar kecil */
+        text-align: center;
+    }
+
+    .service-cards {
+        grid-template-columns: 1fr; /* Layar kecil hanya satu kolom */
+    }
+
+    .contact-info {
+        grid-column: span 2; /* Konten di layar kecil kembali menjadi satu kolom */
+    }
+    .grid-container {
+        grid-template-columns: 1fr; /* Membuat elemen dalam satu kolom */
+    }
+}

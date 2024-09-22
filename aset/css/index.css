@@ -52,9 +52,9 @@ form {
 }
 
 .banner-image {
-    width: 1500px;
+    width: 100%;
     margin-top: 65px;
-    height: 500px;
+    height: 100%;
     object-fit: cover; /* Agar gambar menyesuaikan ukuran container */
     border-radius: 10px; /* Berikan sudut sedikit melengkung */
 }
@@ -87,6 +87,75 @@ form {
 }
 
 
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #E9EFEC; /* Warna latar belakang lembut */
+}
+
+.form-wrapper {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.form-wrapper h2 {
+    margin-bottom: 1.5rem;
+    color: #16423C;
+    font-size: 2rem;
+}
+
+.form-wrapper input[type="text"],
+.form-wrapper input[type="password"] {
+    width: 100%;
+    padding: 0.75rem;
+    margin: 0.5rem 0;
+    border: 1px solid #C4DAD2;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #16423C;
+    background-color: #F9F9F9;
+}
+
+.form-wrapper input:focus {
+    outline: none;
+    border-color: #6A9C89;
+}
+
+.form-wrapper button {
+    width: 100%;
+    padding: 0.75rem;
+    margin-top: 1rem;
+    background-color: #6A9C89;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form-wrapper button:hover {
+    background-color: #16423C;
+}
+
+.form-wrapper a {
+    display: block;
+    margin-top: 1rem;
+    color: #16423C;
+    text-decoration: none;
+}
+
+.form-wrapper a:hover {
+    text-decoration: underline;
+}
+
 /* Styling for the "Apply for Job" button */
 .btn-apply {
     display: block; /* Membuat tombol menjadi elemen block agar mudah diposisikan */
@@ -115,7 +184,7 @@ form {
 }
 
 .logo {
-    font-size: 1.5rem;
+    font-size: 30px;
     font-weight: bold;
 }
 
@@ -353,6 +422,9 @@ footer {
     .nav-links li {
         margin: 1.5rem 0;
     }
+
+    .form-wrapper {
+        width: 90%;}
 
     .about-section, .services-section, .contact-section {
         grid-template-columns: 1fr; /* Satu kolom di layar kecil */

@@ -2,7 +2,7 @@
 $server = "localhost";
 $user = "root";
 $password = "";
-$nama_database = "19387571160-4_Daven Al Khalwarizmy"; // Adjusted name if needed
+$nama_database = "lowongankerja"; // Adjusted name if needed
 
 // Establish connection
 $db = mysqli_connect($server, $user, $password, $nama_database);
